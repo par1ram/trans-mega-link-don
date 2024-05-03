@@ -1,12 +1,9 @@
-import { useState } from "react"
 import './Button.css'
 
-const Button = ({  }) => {
-    const [mail, setMail] = useState('mail')
-
+const Button = ({ mail, setMail, item }) => {
     return (
         <>
-            <button onClick={() => {}}>
+            <button className='round' onClick={() => setMail(item.mail)}>
                 mail
             </button>
         </>

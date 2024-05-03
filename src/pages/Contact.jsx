@@ -1,10 +1,11 @@
 import Header from "../components/Header/Header";
+import TextControlsExample from "../components/Form/Form";
 
 const Contact = () => {
   return (
     <div className="wrapper">
       <Header />
-      <span>Contact</span>
+      <TextControlsExample />
     </div>
   );
 };

@@ -11,7 +11,8 @@ const Item = ({ item }) => {
       <div className="info">
         <h2>{item.name}</h2>
         <p>{item.rank}</p>
-        <Button mail={mail} setMail={setMail}/>
+        <Button mail={mail} setMail={setMail} item={item}/>
+        <p>{mail}</p>
         <b>{item.category}</b>
       </div>
     </div>
