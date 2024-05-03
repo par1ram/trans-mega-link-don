@@ -1,4 +1,4 @@
-import Student from "../Student/Student";
+import Student from "./Student";
 
 const PrintStudents = ({ students }) => {
   return (
@@ -9,4 +9,3 @@ const PrintStudents = ({ students }) => {
 };
 
 export default PrintStudents
-

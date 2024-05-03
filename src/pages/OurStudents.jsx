@@ -1,5 +1,5 @@
 import Header from "../components/Header/Header";
-import PrintStudents from "../components/PrintStudents/PrintStudents";
+import PrintStudents from "../components/Student/PrintStudents";
 
 const OurStudents = () => {
   const students = [
