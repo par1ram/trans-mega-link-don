@@ -1,0 +1,36 @@
+header .logo {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    padding: 5px;
+    cursor: pointer;
+    color: #222;
+}
+
+header ul.nav li:hover {
+    color: blue;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.rLink {
+    text-decoration: none;
+}
+
+.rLink:hover {
+    transition: transform 500ms ease;
+    transform: scale(1.1);
+}
+
+.icon {
+    margin-right: 30px;
+}
