@@ -6,7 +6,7 @@ const OurStudents = () => {
     {
       id: 1,
       firstname: "asd",
-      lastbane: "asd",
+      lastname: "asd",
       patronomic: "asd",
       email: "email@gmail.com",
       direction: "Фундоментальная информатика",
@@ -15,7 +15,7 @@ const OurStudents = () => {
     {
         id: 2,
         firstname: "John",
-        lastName: "Doe",
+        lastname: "Doe",
         patronomic: "Smith",
         email: "johndoe@example.com",
         direction: "Computer Science",
@@ -24,7 +24,7 @@ const OurStudents = () => {
       {
         id: 3,
         firstname: "Emma",
-        lastName: "Johnson",
+        lastname: "Johnson",
         patronomic: "Brown",
         email: "emmaj@example.com",
         direction: "Software Engineering",
