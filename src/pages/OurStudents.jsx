@@ -1,36 +1,14 @@
 import Header from "../components/Header/Header";
 import PrintStudents from "../components/Student/PrintStudents";
+import {useState} from 'react'
+import axios from 'axios'
 
 const OurStudents = () => {
-  const students = [
-    {
-      id: 1,
-      firstname: "asd",
-      lastname: "asd",
-      patronomic: "asd",
-      email: "email@gmail.com",
-      direction: "Фундоментальная информатика",
-      group: "БФИ2205",
-    },
-    {
-        id: 2,
-        firstname: "John",
-        lastname: "Doe",
-        patronomic: "Smith",
-        email: "johndoe@example.com",
-        direction: "Computer Science",
-        group: "CS2023",
-      },
-      {
-        id: 3,
-        firstname: "Emma",
-        lastname: "Johnson",
-        patronomic: "Brown",
-        email: "emmaj@example.com",
-        direction: "Software Engineering",
-        group: "SE2101",
-      },
-  ]
+  const [students, setStudents] = useState([])
+  axios("http://localhost:4000/allDirections")
+    .then(r => {
+      setStudents(r)
+    })
   
   return (
     <div className="wrapper">
