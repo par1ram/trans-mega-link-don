@@ -16,13 +16,13 @@ const Student = ({ students }) => {
       </thead>
       <tbody>
         {students.map((el) => (
-          <tr>
+          <tr key={el.id}>
             <td>{el.id}</td>
-            <td>{el.firstname}</td>
-            <td>{el.lastname}</td>
-            <td>{el.patronomic}</td>
-            <td>{el.direction}</td>
-            <td>{el.group}</td>
+            <td>{el.firstName}</td>
+            <td>{el.lastName}</td>
+            <td>{el.patronymic}</td>
+            <td>{el.direction.name}</td>
+            <td>{el.group.name}</td>
           </tr>
         ))}
       </tbody>

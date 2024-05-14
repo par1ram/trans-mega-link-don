@@ -8,7 +8,7 @@ const About = () => {
   const [items, setItems] = useState([])
   axios("http://localhost:4000/allDirections")
     .then(r => {
-      setItems(r)
+      setItems(r.data)
     })
 
   return (
