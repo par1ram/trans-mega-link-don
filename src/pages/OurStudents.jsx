@@ -1,19 +1,20 @@
 import Header from "../components/Header/Header";
 import PrintStudents from "../components/Student/PrintStudents";
-import {useState} from 'react'
-import axios from 'axios'
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const OurStudents = () => {
-  const [students, setStudents] = useState([])
-  axios("http://localhost:4000/allStudents")
-    .then(r => {
-      setStudents(r.data)
-    })
-  
+  const [students, setStudents] = useState([]);
+  useEffect(() => {
+    axios("http://localhost:4000/allStudents").then((r) => {
+      setStudents(r.data);
+    });
+  },)
+
   return (
     <div className="wrapper">
       <Header />
-      <PrintStudents students={students}/>
+      <PrintStudents students={students} />
     </div>
   );
 };
