@@ -1,0 +1,56 @@
+.presentation {
+    display: flex;
+    justify-content: end;
+    margin: 50px 0;
+    background: url('./img/antenna.jpg') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+
+    animation-name: resize;
+    animation-duration: 1s;
+}
+
+.presentation span {
+    margin: 4rem;
+    padding: 1rem;
+    font-size: larger;
+    text-align: center;
+    width: 40%;
+    height: fit-content;
+    color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    background-color: #ffffff05;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .presentation span {
+        font-size: small;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .presentation span {
+        margin: 0.6rem;
+        width: 90%;
+        font-size: smaller;
+        text-align: start;
+    }
+}
+
+@keyframes resize {
+    0% {
+        width: 75%;
+    }
+    100% {
+        width: 100%;
+    }
+}

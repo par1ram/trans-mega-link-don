@@ -1,13 +1,11 @@
-import './Button.css'
+import "./Button.css"
 
-const Button = ({ mail, setMail, item }) => {
-    return (
-        <>
-            <button className='round' onClick={() => setMail(item)}>
-                mail
-            </button>
-        </>
-    )
+const Button = ({ children }) => {
+  return (
+    <>
+      <button className="round">{children}</button>
+    </>
+  )
 }
 
 export default Button

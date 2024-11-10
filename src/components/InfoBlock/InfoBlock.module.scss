@@ -1,0 +1,71 @@
+.item {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	width: 30%;
+	padding: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.1);
+	cursor: pointer;
+
+	.icon {
+		margin-bottom: 1rem;
+	}
+
+	.content {
+		text-align: center;
+		font-size: large;
+	}
+	> button {
+		margin-top: 1rem;
+	}
+	> button:active {
+		border-color: white;
+	}
+}
+
+.item:hover {
+	animation-name: toggle-block;
+	animation-timing-function: linear;
+	animation-duration: 0.7s;
+}
+
+.group {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+	.item {
+		width: 40%;
+		margin: 1rem;
+	}
+}
+
+@media (max-width: 555px) {
+	.item {
+		width: 100%;
+		margin: 1rem;
+	}
+}
+
+@keyframes toggle-block {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	25% {
+		transform: translate(2px, 2px) rotate(2deg);
+	}
+	75% {
+		transform: translate(3px, 3px) rotate(-2deg);
+	}
+	100% {
+		transform: traslate(0px, 0px) rotate(0deg);
+	}
+}

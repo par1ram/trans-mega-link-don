@@ -1,25 +1,31 @@
 header .logo {
     font-weight: 600;
-    font-size: 25px;
+    font-size:xx-large;
 }
 
-header ul.nav {
-    float: right;
-    list-style: none;
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
 header ul.nav li {
-    display: inline;
-    margin-left: 25px;
-    padding: 5px;
+    margin-left: 1rem;
+    padding: 0.5rem;
     cursor: pointer;
-    color: #222;
+    color: rgba(0, 0, 0, 0.750);
+    border: solid 2px;
+    border-color: rgba(210, 210, 210);
+    border-radius: 1rem;
 }
 
 header ul.nav li:hover {
-    color: blue;
-    background-color: aliceblue;
-    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(210, 210, 210);
+    border-radius: 1rem;
+}
+
+header ul.nav li:active {
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .rLink {
@@ -27,10 +33,86 @@ header ul.nav li:hover {
 }
 
 .rLink:hover {
-    transition: transform 500ms ease;
+    transition: transform 300ms ease-in-out;
     transform: scale(1.1);
 }
 
 .icon {
     margin-right: 30px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.dropdown {
+    display: none;
+}
+
+.RLink {
+    text-decoration: none;
+    margin-top: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    color: black;
+    font-size: small;
+}
+
+.RLink:active {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdownicon:active {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 700px) {
+    .menu {
+        display: none;
+    }
+    header .logo {
+        font-size: large;
+    }
+    .mobileMenu {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        cursor: pointer;
+        border: 2px solid;
+        border-radius: 1rem;
+        padding: 0.3rem;
+        border-color: rgb(210, 210, 210);
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        align-items: start;
+        border: 2px solid rgb(210, 210, 210);
+        border-radius: 1rem;
+        padding: 0.5rem;
+        margin-top: 0.3rem;
+	    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 700px) {
+    .icon {
+        display: none;
+    }
+    header ul.nav li {
+        font-size: large;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
 }
